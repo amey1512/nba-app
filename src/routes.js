@@ -1,23 +1,20 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Home from './components/Home/home.js';
 
-const Routes = () => {
-  // const print = () => {
-  //   return "This is first route";
-  // }
-
-  return (
-    <div>
-      <Switch>
-        <Route path="/home" exact component = {Home}/>
-      </Switch>
+class Routes extends Component {
+  render() {
+    return (
       <div>
-        <h2>Vaccine is out from Russia.</h2>
-        <Home/>
+        <Switch>
+          <Route path="/home" exact component = {Home}/>
+        </Switch>
+        <div>
+          <h2>Vaccine is out from Russia.</h2>
+          <Home/>
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
-
 export default Routes;
